@@ -1,0 +1,258 @@
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+<script>
+    $(function () {
+        $('.temps').text(function(){
+            let today = new Date() ;
+      //return 'Last update : ' +  + Date.prototype.getDay() + '/'+Date.prototype.getDate()+'/'+
+          return 'Last update : ' + today.toLocaleDateString() + ' ' +today.toLocaleTimeString() ;
+
+  });
+
+    })
+</script>
+
+<script>
+$(document).ready(function(){
+
+
+ $('#load_data').click(function(){
+  $.ajax({
+   url:"employee.csv",
+   dataType:"text",
+   success:function(data)
+   {
+    var employee_data = data.split(/\r?\n|\r/);
+    var table_data = '<table class="table table-bordered table-striped">';
+    for(var count = 0; count<employee_data.length; count++)
+    {
+     var cell_data = employee_data[count].split(",");
+     table_data += '<tr>';
+     for(var cell_count=0; cell_count<cell_data.length; cell_count++)
+     {
+      if(count === 0)
+      {
+       table_data += '<th>'+cell_data[cell_count]+'</th>';
+      }
+      else
+      {
+       table_data += '<td>'+cell_data[cell_count]+'</td>';
+      }
+     }
+     table_data += '</tr>';
+    }
+    table_data += '</table>';
+    $('#employee_table').html(table_data);
+   }
+     $( "#accordion" ).accordion({
+        collapsible: true
+      });
+  });
+ });
+
+});
+</script>
+
+
+<script>
+      $(document).ready(function(){
+        $("#mycarousel").carousel({ interval : 200 });
+
+        $("#carouselButton").click(function(){
+          if($('#carouselButton').children("span").hasClass('fa-pause')){
+            $("#mycarousel").carousel("pause");
+            $("#carouselButton").children("span").removeClass('fa-pause');
+            $("#carouselButton").children("span").addClass('fa-play');
+          }
+          else if ($('#carouselButton').children("span").hasClass('fa-play')){
+            $("#mycarousel").carousel("cycle");
+            $("#carouselButton").children("span").removeClass('fa-play');
+            $("#carouselButton").children("span").addClass('fa-pause');
+          }
+
+        });
+      });
+    </script>
+<script>
+    $(function () {
+          $("#europe-btn").on('click',function () {
+
+              $("#europe-btn").removeClass('btn-primary').addClass('btn-secondary');
+              if ($("#all-btn").hasClass('btn-secondary')) {
+                  $("#all-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+              if ($("#africa-btn").hasClass('btn-secondary')) {
+                  $("#africa-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+              if ($("#asia-btn").hasClass('btn-secondary')) {
+                  $("#asia-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+              if ($("#north_america-btn").hasClass('btn-secondary')) {
+                  $("#north_america-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+              if ($("#south_america-btn").hasClass('btn-secondary')) {
+                  $("#south_america-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+              if ($("#oceania-btn").hasClass('btn-secondary')) {
+                  $("#oceania-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+
+
+        });
+           $("#all-btn").on('click',function () {
+
+              $("#all-btn").removeClass('btn-primary').addClass('btn-secondary');
+              if ($("#europe-btn").hasClass('btn-secondary')) {
+                  $("#europe-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+              if ($("#africa-btn").hasClass('btn-secondary')) {
+                  $("#africa-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+              if ($("#asia-btn").hasClass('btn-secondary')) {
+                  $("#asia-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+              if ($("#north_america-btn").hasClass('btn-secondary')) {
+                  $("#north_america-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+              if ($("#south_america-btn").hasClass('btn-secondary')) {
+                  $("#south_america-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+              if ($("#oceania-btn").hasClass('btn-secondary')) {
+                  $("#oceania-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+
+
+        });
+           $("#north_america-btn").on('click',function () {
+
+              $("#north_america-btn").removeClass('btn-primary').addClass('btn-secondary');
+              if ($("#all-btn").hasClass('btn-secondary')) {
+                  $("#all-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+              if ($("#africa-btn").hasClass('btn-secondary')) {
+                  $("#africa-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+              if ($("#asia-btn").hasClass('btn-secondary')) {
+                  $("#asia-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+              if ($("#europe-btn").hasClass('btn-secondary')) {
+                  $("#europe-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+              if ($("#south_america-btn").hasClass('btn-secondary')) {
+                  $("#south_america-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+              if ($("#oceania-btn").hasClass('btn-secondary')) {
+                  $("#oceania-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+
+
+        });
+           $("#asia-btn").on('click',function () {
+
+              $("#asia-btn").removeClass('btn-primary').addClass('btn-secondary');
+              if ($("#all-btn").hasClass('btn-secondary')) {
+                  $("#all-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+              if ($("#africa-btn").hasClass('btn-secondary')) {
+                  $("#africa-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+              if ($("#europe-btn").hasClass('btn-secondary')) {
+                  $("#europe-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+              if ($("#north_america-btn").hasClass('btn-secondary')) {
+                  $("#north_america-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+              if ($("#south_america-btn").hasClass('btn-secondary')) {
+                  $("#south_america-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+              if ($("#oceania-btn").hasClass('btn-secondary')) {
+                  $("#oceania-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+
+
+        });
+           $("#south_america-btn").on('click',function () {
+
+              $("#south_america-btn").removeClass('btn-primary').addClass('btn-secondary');
+              if ($("#all-btn").hasClass('btn-secondary')) {
+                  $("#all-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+              if ($("#africa-btn").hasClass('btn-secondary')) {
+                  $("#africa-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+              if ($("#asia-btn").hasClass('btn-secondary')) {
+                  $("#asia-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+              if ($("#north_america-btn").hasClass('btn-secondary')) {
+                  $("#north_america-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+              if ($("#europe-btn").hasClass('btn-secondary')) {
+                  $("#europe_america-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+              if ($("#oceania-btn").hasClass('btn-secondary')) {
+                  $("#oceania-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+
+
+    });
+       $("#africa-btn").on('click',function () {
+
+              $("#africa-btn").removeClass('btn-primary').addClass('btn-secondary');
+              if ($("#all-btn").hasClass('btn-secondary')) {
+                  $("#all-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+              if ($("#europe-btn").hasClass('btn-secondary')) {
+                  $("#europe-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+              if ($("#asia-btn").hasClass('btn-secondary')) {
+                  $("#asia-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+              if ($("#north_america-btn").hasClass('btn-secondary')) {
+                  $("#north_america-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+              if ($("#south_america-btn").hasClass('btn-secondary')) {
+                  $("#south_america-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+              if ($("#oceania-btn").hasClass('btn-secondary')) {
+                  $("#oceania-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+
+
+        });
+           $("#oceania-btn").on('click',function () {
+
+              $("#oceania-btn").removeClass('btn-primary').addClass('btn-secondary');
+              if ($("#all-btn").hasClass('btn-secondary')) {
+                  $("#all-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+              if ($("#africa-btn").hasClass('btn-secondary')) {
+                  $("#africa-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+              if ($("#asia-btn").hasClass('btn-secondary')) {
+                  $("#asia-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+              if ($("#north_america-btn").hasClass('btn-secondary')) {
+                  $("#north_america-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+              if ($("#south_america-btn").hasClass('btn-secondary')) {
+                  $("#south_america-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+              if ($("#europe-btn").hasClass('btn-secondary')) {
+                  $("#europe-btn").removeClass('btn-secondary').addClass('btn-primary');
+              }
+
+
+    });
+
+
+    });
+
+</script>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <!-- Bootstrap CSS -->
+    {% load static %}
+    <link
+      rel="stylesheet"
+      href="{% static 'css/bootstrap/dist/css/bootstrap.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/font-awesome/css/font-awesome.min.css' %}"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{% static 'css/bootstrap-social/bootstrap-social.css' %}"
+    />
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    <title>Ristorante Con Fusion</title>
+
+<script src="{% static 'js/node_modules/jquery/dist/jquery.min.js' %}"></script>
+<script src="{% static 'js/node_modules/popper.js/dist/umd/popper.min.js' %}"></script>
+<script src="{% static 'js/node_modules/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script>
+
+var endpoint='{% url "api-chart-data" %}' // {% url "api-data" %}
+$.ajax({
+    method:"GET",
+    url : endpoint ,
+    success : function(data){
+        console.log(data)
+        console.log(data.customers * 5)
+    },
+    error : function(error_data) {
+        console.log("error")
+        console.log(error_data)
+
+    }
+
+})
+
+var ctx = document.getElementById('myChart');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
+
+</script>
+  </head>
+
+  <body>
+    <!-- Bootstrap navBar -->
+    <nav class="navbar navbar-dark navbar-expand-sm bg-primary fixed-top">
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#Navbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand mr-auto" href="#"> Ristorante Con Fusion</a>
+        <div class="collapse navbar-collapse" id="Navbar">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                ><span class="fa fa-home fa-lg"> Home</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'aboutus' %}"
+              
+                ><span class="fa fa-info fa-lg"> About</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><span class="fa fa-list fa-lg"> Menu</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contactus' %}"
+                ><span class="fa fa-address-card fa-lg"> Contact</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header class="jumbotron">
+      <div class="container">
+        <div class="row row-header">
+          <div class="col-12 col-sm-6">
+            <h1>Ristorante con Fusion</h1>
+            <p>
+              We take inspiration from the World's best cuisines, and create a
+              unique fusion experience. Our lipsmacking creations will tickle
+              your culinary senses!
+            </p>
+          </div>
+          <div class="col-12 col-sm"></div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <canvas id="myChart" width="100" height="100"></canvas>
+      </div>
+
+
+    <div class="container">
+      <div class="row row-content align-items-center">
+        <div class="col-12 col-sm-4 col-md-3">
+          <h3>Our Lipsmacking Culinary Creations</h3>
+        </div>
+        <div class="col col-sm col-md">
+          <h2>Uthappizza</h2>
+          <p>
+            A unique combination of Indian Uthappam (pancake) and Italian pizza,
+            topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia
+            onion, Guntur chillies and Buffalo Paneer.
+          </p>
+        </div>
+      </div>
+
+      <div class="row row-content align-items-center">
+        <div class="col-12 col-sm-4 col-md-3">
+          <h3>This Month's Promotions</h3>
+        </div>
+        <div class="col col-sm col-md">
+          <h2>Weekend Grand Buffet</h2>
+          <p>
+            Featuring mouthwatering combinations with a choice of five different
+            salads, six enticing appetizers, six main entrees and five choicest
+            desserts. Free flowing bubbly and soft drinks. All for just $19.99
+            per person
+          </p>
+        </div>
+      </div>
+
+      <div class="row row-content align-items-center">
+        <div class="col-12 col-sm-4 col-md-3">
+          <h3>Meet our Culinary Specialists</h3>
+        </div>
+        <div class="col col-sm col-md">
+          <h2>Alberto Somayya</h2>
+          <h4>Executive Chef</h4>
+          <p>
+            Award winning three-star Michelin chef with wide International
+            experience having worked closely with whos-who in the culinary
+            world, he specializes in creating mouthwatering Indo-Italian fusion
+            experiences.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-4 col-sm-2 align-self-center">
+            <h5>Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Home</a></li>
+              <li><a href="{% url 'aboutus' %}">About</a></li>
+              <li><a href="#">Menu</a></li>
+              <li><a href="{% url 'aboutus' %}">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-7 col-sm-5">
+            <h5>Our Address</h5>
+            <address>
+              121, Clear Water Bay Road<br />
+              Clear Water Bay, Kowloon<br />
+              HONG KONG<br />
+              <span class="fa fa-phone fa-lg"> Tel : +852 1234 5678</span>
+              <br />
+              <span class="fa fa-fax fa-lg"> Fax: +852 8765 4321</span>
+              <br />
+              <span class="fa fa-envelope fa-lg">
+                Email:
+                <a href="mailto:confusion@food.net">confusion@food.net</a></span
+              >
+            </address>
+          </div>
+          <div class="col-12 col-sm-4 align-self-center">
+            <div class="text-center">
+              <a class="btn btn-social-icon btn-google href="http://google.com/+"
+                ><span class="fa fa-google-plus fa-lg"></span
+              ></a>
+              <a class="btn btn-social-icon btn-facebook href="http://www.linkedin.com/in/"
+                ><i class="fa fa-facebook fa-lg"></i
+              ></a>
+              <a class="btn btn-social-icon btn-linkedin href="http://www.linkedin.com/in/"
+                ><i class="fa fa-linkedin fa-lg"></i
+              ></a>
+              <a class="btn btn-social-icon btn-twitter href="http://twitter.com/"
+                ><span class="fa fa-twitter fa-lg"></span
+              ></a>
+              <a class="btn btn-social-icon btn-google href="http://youtube.com/"
+                ><span class="fa fa-youtube fa-lg"></span
+              ></a>
+              <a class="btn btn-social-icon mail-icon" href="mailto:"><span class="fa fa-envelope fa-lg"></span></a>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-auto">
+            <p>© Copyright 2018 Ristorante Con Fusion</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <% load static %}
+    <script src="{% static 'js/node_modules/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'js/node_modules/popper.js/dist/umd/popper.min.js' %}"></script>
+    <script src="{% static 'js/node_modules/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+  </body>
+</html>

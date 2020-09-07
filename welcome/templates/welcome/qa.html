@@ -1,0 +1,907 @@
+{% extends 'welcome/base.html' %}
+{% block content %}
+    <div class="container">
+      <div class="row  pt-5">
+        <div class="col-sm-8 offset-sm-2 ">
+                <table class="table  table-borderless table-hover table-active">
+                    <tbody>
+                         <tr>
+                             <td class="text-center ">
+                                 <a href="{% url 'chart' %}" style="text-decoration: underline; font-size: 28px">Home</a>
+                                 <span style="font-size: 28px"> &nbsp;/&nbsp;Q&A </span>
+                             </td>
+                         </tr>
+                    </tbody>
+                </table>
+
+      </div>
+      </div>
+        <div class="row row-content">
+            <div class="col-12 mb-5" >
+                <h1 style="color: coral ;text-decoration: underline" id="1">Q&A on coronaviruses (COVID-19) :</h1>
+            </div>
+            <div class="col-12 card border-light mb-3" >
+              <div class="card-header text-center" ><h2 style="color: cornflowerblue" >1- What is a coronavirus ?</h2></div>
+              <div class="card-body">
+
+                <p class="card-text" style="font-size: 25px">
+                    Coronaviruses are a large family of viruses which may cause illness in animals or humans.  In humans, several coronaviruses are known to cause respiratory infections ranging from the common cold to more severe diseases such as Middle East Respiratory Syndrome (MERS) and Severe Acute Respiratory Syndrome (SARS). The most recently discovered coronavirus causes coronavirus disease COVID-19.
+                </p>
+              </div>
+            </div>
+             <div class="col-12 card border-light mb-3"  id="2" >
+              <div class="card-header text-center" ><h2 style="color: cornflowerblue">2- What is COVID-19 ?</h2></div>
+              <div class="card-body">
+
+                <p class="card-text" style="font-size: 25px">
+                    COVID-19 is the infectious disease caused by the most recently discovered coronavirus. This new virus and disease were unknown before the outbreak began in Wuhan, China, in December 2019. COVID-19 is now a pandemic affecting many countries globally.                </p>
+                 <div style="color: coral">
+                      Previous question : <a href="#1" style="text-decoration: underline">1</a>
+                 </div>
+
+              </div>
+            </div>
+             <div class="col-12 card border-light mb-3" >
+              <div class="card-header text-center" ><h2 style="color: cornflowerblue" id="3"> 3- What are the symptoms of COVID-19 ?</h2></div>
+              <div class="card-body">
+
+                <p class="card-text" style="font-size: 25px">
+                    The most common symptoms of COVID-19 are fever, dry cough, and tiredness. Other symptoms that are less common and may affect some patients include aches and pains, nasal congestion, headache, conjunctivitis, sore throat, diarrhea, loss of taste or smell or a rash on skin or discoloration of fingers or toes. These symptoms are usually mild and begin gradually. Some people become infected but only have very mild symptoms.
+                    Most people (about 80%) recover from the disease without needing hospital treatment. Around 1 out of every 5 people who gets COVID-19 becomes seriously ill and develops difficulty breathing. Older people, and those with underlying medical problems like high blood pressure, heart and lung problems, diabetes, or cancer, are at higher risk of developing serious illness.  However, anyone can catch COVID-19 and become seriously ill.  People of all ages who experience fever and/or  cough associated withdifficulty breathing/shortness of breath, chest pain/pressure, or loss of speech or movement should seek medical attention immediately. If possible, it is recommended to call the health care provider or facility first, so the patient can be directed to the right clinic.
+                </p>
+                  <a style="font-size: 20px;color: darkseagreen;text-decoration: underline" href="https://www.youtube.com/watch?v=677pSwGauqs" target="_blank"> Video: Five things to know about COVID-19 transmission</a>
+                <div style="color: coral" class="mt-3">
+                      Previous questions :
+                    <a href="#1" style="text-decoration: underline">1</a>
+                        &nbsp;
+                     <a href="#2" style="text-decoration: underline">2</a>
+                 </div>
+              </div>
+            </div>
+             <div class="col-12 card border-light mb-3" >
+              <div class="card-header text-center" ><h2 style="color: cornflowerblue" id="4">4- What should I do if I have COVID-19 symptoms and when should I seek medical care ?</h2></div>
+              <div class="card-body">
+
+                <p class="card-text" style="font-size: 25px">
+                        If you have minor symptoms, such as a slight cough or a mild fever, there is generally no need to seek medical care. Stay at home, self-isolate and monitor your symptoms. Follow national guidance on self-isolation.
+
+                        However, if you live in an area with malaria or dengue fever it is important that you do not ignore symptoms of fever.  Seek medical help.  When you attend the health facility wear a mask if possible, keep at least 1 metre distance from other people and do not touch surfaces with your hands. If it is a child who is sick help the child stick to this advice.
+
+                        Seek immediate medical care if you have difficulty breathing or pain/pressure in the chest. If possible, call your health care provider in advance, so he/she can direct you to the right health facility.                </p>
+                  <a style="font-size: 20px;color: darkseagreen;text-decoration: underline" href="https://www.youtube.com/watch?v=677pSwGauqs" target="_blank"> Video: Five things to know about COVID-19 transmission</a>
+                     <div style="color: coral" class="mt-3">
+                      Previous questions :
+                    <a href="#1" style="text-decoration: underline">1</a>
+                        &nbsp;
+                     <a href="#2" style="text-decoration: underline">2</a>
+                           &nbsp;
+                     <a href="#3" style="text-decoration: underline">3</a>
+                 </div>
+              </div>
+            </div>
+             <div class="col-12 card border-light mb-3" >
+              <div class="card-header text-center" ><h2 style="color: cornflowerblue" id="5">5- How does COVID-19 spread ?</h2></div>
+              <div class="card-body">
+
+                <p class="card-text" style="font-size: 25px">
+                    People can catch COVID-19 from others who have the virus. The disease spreads primarily from person to person through small droplets from the nose or mouth, which are expelled when a person with COVID-19 coughs, sneezes, or speaks. These droplets are relatively heavy, do not travel far and quickly sink to the ground. People can catch COVID-19 if they breathe in these droplets from a person infected with the virus.  This is why it is important to stay at least 1 meter) away from others. These droplets can land on objects and surfaces around the person such as tables, doorknobs and handrails.  People can become infected by touching these objects or surfaces, then touching their eyes, nose or mouth.  This is why it is important to wash your hands regularly with soap and water or clean with alcohol-based hand rub.
+                    <br>
+                    <br>
+                    WHO is assessing ongoing research on the ways that COVID-19 is spread and will continue to share updated findings.
+                </p>
+                     <div style="color: coral" class="mt-3">
+                      Previous questions :
+                    <a href="#1" style="text-decoration: underline">1</a>
+                        &nbsp;
+                     <a href="#2" style="text-decoration: underline">2</a>
+                           &nbsp;
+                     <a href="#3" style="text-decoration: underline">3</a>
+                         &nbsp;
+                     <a href="#4" style="text-decoration: underline">4</a>
+                 </div>
+              </div>
+            </div>
+             <div class="col-12 card border-light mb-3" >
+              <div class="card-header text-center" ><h2 style="color: cornflowerblue" id="6">6- Can COVID-19 be caught from a person who has no symptoms ?</h2></div>
+              <div class="card-body">
+
+                <p class="card-text" style="font-size: 25px">
+                    COVID-19 is mainly spread through respiratory droplets expelled by someone who is coughing or has other symptoms such as fever or tiredness. Many people with COVID-19 experience only mild symptoms. This is particularly true in the early stages of the disease. It is possible to catch COVID-19 from someone who has just a mild cough and does not feel ill.
+                    <br>
+                    <br>
+                    Some reports have indicated that people with no symptoms can transmit the virus. It is not yet known how often it happens. WHO is assessing ongoing research on the topic and will continue to share updated findings.
+                </p>
+                  <a style="font-size: 20px;color: darkseagreen;text-decoration: underline" href="https://www.youtube.com/watch?v=677pSwGauqs" target="_blank"> Video: Five things to know about COVID-19 transmission</a>
+                    <div style="color: coral" class="mt-3">
+                          Previous questions :
+                        <a href="#1" style="text-decoration: underline">1</a>
+                            &nbsp;
+                         <a href="#2" style="text-decoration: underline">2</a>
+                               &nbsp;
+                         <a href="#3" style="text-decoration: underline">3</a>
+                             &nbsp;
+                         <a href="#4" style="text-decoration: underline">4</a>
+                            &nbsp;
+                         <a href="#5" style="text-decoration: underline">5</a>
+                    </div>
+              </div>
+            </div>
+             <div class="col-12 card border-light mb-3" >
+              <div class="card-header text-center" ><h2 style="color: cornflowerblue" id="7">7- How can we protect others and ourselves if we don't know who is infected ?</h2></div>
+              <div class="card-body">
+
+
+                <p class="card-text" style="font-size: 25px">
+                    Practicing hand and respiratory hygiene is important at ALL times and is the best way to protect others and yourself.
+                  <br>
+                  <br>
+                  When possible maintain at least a 1 meter distance between yourself and others. This is especially important if you are standing by someone who is coughing or sneezing.  Since some infected persons may not yet be exhibiting symptoms or their symptoms may be mild, maintaining a physical distance with everyone is a good idea if you are in an area where COVID-19 is circulating.
+                </p>
+                      <div style="color: coral" class="mt-3">
+                          Previous questions :
+                        <a href="#1" style="text-decoration: underline">1</a>
+                            &nbsp;
+                         <a href="#2" style="text-decoration: underline">2</a>
+                               &nbsp;
+                         <a href="#3" style="text-decoration: underline">3</a>
+                             &nbsp;
+                         <a href="#4" style="text-decoration: underline">4</a>
+                            &nbsp;
+                         <a href="#5" style="text-decoration: underline">5</a>
+                          &nbsp;
+                         <a href="#6" style="text-decoration: underline">6</a>
+                    </div>
+              </div>
+            </div>
+             <div class="col-12 card border-light mb-3" >
+              <div class="card-header text-center" ><h2 style="color: cornflowerblue" id="8">8- What should I do if I have come in close contact with someone who has COVID-19?</h2></div>
+              <div class="card-body">
+                  <div class="card-text" style="font-size: 25px">
+                      <p >
+                    If you have been in close contact with someone with COVID-19, you may be infected.
+                    <br>
+                    <br>
+                    Close contact means that you live with or have been in settings of less than 1 metre from those who have the disease. In these cases, it is best to stay at home.
+                    <br>
+                    <br>
+                    However, if you live in an area with malaria or dengue fever it is important that you do not ignore symptoms of fever. Seek medical help. When you attend the health facility wear a mask if possible, keep at least 1 metre distant from other people and do not touch surfaces with your hands. If it is a child who is sick help the child stick to this advice.
+                    <br>
+                    <br>
+                    If you do <b>not </b> live in an area with malaria or dengue fever please do the following:
+                </p>
+                  <ul>
+                      <li>If you become ill, even with very mild symptoms you must self-isolate</li>
+                      <li>Even if you don’t think you have been exposed to COVID-19 but develop symptoms, then self-isolate and monitor yourself</li>
+                      <li>You are more likely to infect others in the early stages of the disease when you just have mild symptoms, therefore early self-isolation is very important.</li>
+                      <li>If you do not have symptoms, but have been exposed to an infected person, self-quarantine for 14 days.</li>
+                  </ul>
+                  <p>
+                      If you have definitely had COVID-19 (confirmed by a test) self-isolate for 14 days even after symptoms have disappeared as a precautionary measure – it is not yet known exactly how long people remain infectious after they have recovered. Follow national advice on self-isolation.
+                  </p>
+
+                  </div>
+                  <div style="color: coral" class="mt-3">
+                          Previous questions :
+                        <a href="#1" style="text-decoration: underline">1</a>
+                            &nbsp;
+                         <a href="#2" style="text-decoration: underline">2</a>
+                               &nbsp;
+                         <a href="#3" style="text-decoration: underline">3</a>
+                             &nbsp;
+                         <a href="#4" style="text-decoration: underline">4</a>
+                            &nbsp;
+                         <a href="#5" style="text-decoration: underline">5</a>
+                          &nbsp;
+                         <a href="#6" style="text-decoration: underline">6</a>
+                              &nbsp;
+                         <a href="#7" style="text-decoration: underline">7</a>
+                    </div>
+
+              </div>
+            </div>
+             <div class="col-12 card border-light mb-3" >
+              <div class="card-header text-center" ><h2 style="color: cornflowerblue" id="9">9- What does it mean to self-isolate?</h2></div>
+              <div class="card-body">
+                  <div class="card-text" style="font-size: 25px">
+                      <p>
+                          Self-isolation is an important measure taken by those who have COVID-19 symptoms to avoid infecting others in the community, including family members.
+
+                      </p>
+                      <p>
+                          Self-isolation is when a person who is experiencing fever, cough or other COVID-19 symptoms stays at home and does not go to work, school or public places. This can be voluntarily or based on his/her health care provider’s recommendation. However, if you live in an area with malaria or dengue fever it is important that you do not ignore symptoms of fever. Seek medical help. When you attend the health facility wear a mask if possible, keep at least 1 metre distant from other people and do not touch surfaces with your hands. If it is a child who is sick help the child stick to this advice.
+                      </p>
+                        <p>
+                            If you do not live in an area with malaria or dengue fever please do the following:
+                        </p>
+                      <p>
+                          -  If a person is in self-isolation, it is because he/she is ill but not severely ill (requiring medical attention) :
+
+                      </p>
+                      <ul>
+                          <li>have a large, well-ventilated with hand-hygiene and toilet facilities</li>
+                          <li>If this is not possible, place beds at least 1 metre apart</li>
+                          <li>Keep at least 1 metre from others, even from your family members</li>
+                          <li>Monitor your symptoms daily</li>
+                          <li>Isolate for 14 days, even if you feel healthy</li>
+                          <li>If you develop difficulty breathing, contact your healthcare provider immediately – call them first if possible</li>
+                          <li>Stay positive and energized by keeping in touch with loved ones by phone or online, and by exercising yourself at home.</li>
+                      </ul>
+
+                  </div>
+                    <div style="color: coral" class="mt-3">
+                          Previous questions :
+                        <a href="#1" style="text-decoration: underline">1</a>
+                            &nbsp;
+                         <a href="#2" style="text-decoration: underline">2</a>
+                               &nbsp;
+                         <a href="#3" style="text-decoration: underline">3</a>
+                             &nbsp;
+                         <a href="#4" style="text-decoration: underline">4</a>
+                            &nbsp;
+                         <a href="#5" style="text-decoration: underline">5</a>
+                          &nbsp;
+                         <a href="#6" style="text-decoration: underline">6</a>
+                              &nbsp;
+                         <a href="#7" style="text-decoration: underline">7</a>
+                           &nbsp;
+                         <a href="#8" style="text-decoration: underline">8</a>
+                    </div>
+
+
+              </div>
+            </div>
+             <div class="col-12 card border-light mb-3" >
+              <div class="card-header text-center" ><h2 style="color: cornflowerblue" id="10">10- What is the difference between self-isolation, self-quarantine and distancing ?</h2></div>
+              <div class="card-body">
+
+                <p class="card-text" style="font-size: 25px">
+                    Quarantine means restricting activities or separating people who are not ill themselves but may have been exposed to COVID-19. The goal is to prevent spread of the disease at the time when people just develop symptoms..
+                    <br>
+                    <br>
+                    Isolation means separating people who are ill with symptoms of COVID-19 and may be infectious to prevent the spread of the disease.
+                    <br>
+                    <br>
+                    Physical distancing means being physically apart. WHO recommends keeping at least 1-metre distance from others. This is a general measure that everyone should take even if they are well with no known exposure to COVID-19.
+                </p>
+                    <div style="color: coral" class="mt-3">
+                          Previous questions :
+                        <a href="#1" style="text-decoration: underline">1</a>
+                            &nbsp;
+                         <a href="#2" style="text-decoration: underline">2</a>
+                               &nbsp;
+                         <a href="#3" style="text-decoration: underline">3</a>
+                             &nbsp;
+                         <a href="#4" style="text-decoration: underline">4</a>
+                            &nbsp;
+                         <a href="#5" style="text-decoration: underline">5</a>
+                          &nbsp;
+                         <a href="#6" style="text-decoration: underline">6</a>
+                              &nbsp;
+                         <a href="#7" style="text-decoration: underline">7</a>
+                           &nbsp;
+                         <a href="#8" style="text-decoration: underline">8</a>
+                         &nbsp;
+                         <a href="#9" style="text-decoration: underline">9</a>
+                    </div>
+              </div>
+            </div>
+             <div class="col-12 card border-light mb-3" >
+              <div class="card-header text-center" id="11"><h2 style="color: cornflowerblue">11 - What should I do if I have no symptoms, but I think I have been exposed to COVID-19? What does it mean to self-quarantine ?</h2></div>
+              <div class="card-body">
+                  <div class="card-text" style="font-size: 25px">
+                      <p>To self-quarantine means to separate yourself from others because you have been exposed to someone with COVID-19 even though you, yourself, do not have symptoms.During self-quarantine you monitor yourself for symptoms.  The goal of the self-quarantine is to prevent transmission.  Since people who become ill with COVID-19 can infect people immediately self-quarantine can prevent some infections from happening.  .
+                      </p>
+                      <p>In this case:</p>
+                      <ul>
+                          <li>Have a large, well-ventilated single room with hand hygiene and toilet facilities</li>
+                          <li>If this is not available place beds at least 1 metre apart.</li>
+                          <li>Keep at least 1-metre distance from others, even from your family members.</li>
+                          <li>Monitor your symptoms daily</li>
+                          <li>Self-quarantine for 14 days, even if you feel healthy</li>
+                          <li>If you develop difficulty breathing, contact your healthcare provider immediately – call them first if possible.</li>
+                          <li>Stay positive and energized by keeping in touch with loved ones by phone or online, and by exercising yourself at home.</li>
+                      </ul>
+                      <p>However, if you live in an area with malaria or dengue fever it is important that you do not ignore symptoms of fever.  Seek medical help.  When you attend the health facility wear a mask if possible, keep at least 1 metre distant from other people and do not touch surfaces with your hands. If it is a child who is sick help the child stick to this advice. </p>
+
+                  </div>
+                     <div style="color: coral" class="mt-3">
+                          Previous questions :
+                        <a href="#1" style="text-decoration: underline">1</a>
+                            &nbsp;
+                         <a href="#2" style="text-decoration: underline">2</a>
+                               &nbsp;
+                         <a href="#3" style="text-decoration: underline">3</a>
+                             &nbsp;
+                         <a href="#4" style="text-decoration: underline">4</a>
+                            &nbsp;
+                         <a href="#5" style="text-decoration: underline">5</a>
+                          &nbsp;
+                         <a href="#6" style="text-decoration: underline">6</a>
+                              &nbsp;
+                         <a href="#7" style="text-decoration: underline">7</a>
+                           &nbsp;
+                         <a href="#8" style="text-decoration: underline">8</a>
+                         &nbsp;
+                         <a href="#9" style="text-decoration: underline">9</a>
+                         &nbsp;
+                         <a href="#10" style="text-decoration: underline">10</a>
+                    </div>
+
+
+              </div>
+            </div>
+             <div class="col-12 card border-light mb-3" >
+              <div class="card-header text-center" ><h2 style="color: cornflowerblue" id="12">12- Can children or adolescents catch COVID-19 ?</h2></div>
+              <div class="card-body">
+
+                <p class="card-text" style="font-size: 25px">
+                    Research indicates that children and adolescents are just as likely to become infected as any other age group and can spread the disease.
+                    <br>
+                    <br>
+                    Evidence to date suggests that children and young adults are less likely to get severe disease, but severe cases can still happen in these age groups.
+                    <br>
+                    <br>
+                    Children and adults should follow the same guidance on self-quarantine and self-isolation if there is a risk they have been exposed or are showing symptoms. It is particularly important that children avoid contact with older people and others who are at risk of more severe disease.
+                </p>
+                  <div style="color: coral" class="mt-3">
+                          Previous questions :
+                        <a href="#1" style="text-decoration: underline">1</a>
+                            &nbsp;
+                         <a href="#2" style="text-decoration: underline">2</a>
+                               &nbsp;
+                         <a href="#3" style="text-decoration: underline">3</a>
+                             &nbsp;
+                         <a href="#4" style="text-decoration: underline">4</a>
+                            &nbsp;
+                         <a href="#5" style="text-decoration: underline">5</a>
+                          &nbsp;
+                         <a href="#6" style="text-decoration: underline">6</a>
+                              &nbsp;
+                         <a href="#7" style="text-decoration: underline">7</a>
+                           &nbsp;
+                         <a href="#8" style="text-decoration: underline">8</a>
+                         &nbsp;
+                         <a href="#9" style="text-decoration: underline">9</a>
+                         &nbsp;
+                         <a href="#10" style="text-decoration: underline">10</a>
+                      &nbsp;
+                         <a href="#11" style="text-decoration: underline">11</a>
+                    </div>
+              </div>
+            </div>
+             <div class="col-12 card border-light mb-3" >
+              <div class="card-header text-center" ><h2 style="color: cornflowerblue" id="13">13- What can I do to protect myself and prevent the spread of disease ?</h2></div>
+              <div class="card-body">
+                  <div class="card-text" style="font-size: 25px">
+                      <p>Stay aware of the latest information on the COVID-19 outbreak, available on the WHO website and through your national and local public health authority. Most countries around the world have seen cases of COVID-19 and many are experiencing outbreaks. Authorities in China and some other countries have succeeded in slowing their outbreaks. However, the situation is unpredictable so check regularly for the latest news.</p>
+                      <p>You can reduce your chances of being infected or spreading COVID-19 by taking some simple precautions:</p>
+                      <ul>
+                          <li>Regularly and thoroughly clean your hands with an alcohol-based hand rub or wash them with soap and water. Why? Washing your hands with soap and water or using alcohol-based hand rub kills viruses that may be on your hands.</li>
+                          <li>Maintain at least 1 metre distance between yourself and others. Why? When someone coughs, sneezes, or speaks they spray small liquid droplets from their nose or mouth which may contain virus. If you are too close, you can breathe in the droplets, including the COVID-19 virus if the person has the disease.</li>
+                          <li>Avoid going to crowded places. Why? Where people come together in crowds, you are more likely to come into close contact with someone that has COVID-19 and it is more difficult to maintain physical distance of 1 metre.</li>
+                          <li>Avoid touching eyes, nose and mouth. Why? Hands touch many surfaces and can pick up viruses. Once contaminated, hands can transfer the virus to your eyes, nose or mouth. From there, the virus can enter your body and infect you.</li>
+                          <li>Make sure you, and the people around you, follow good respiratory hygiene. This means covering your mouth and nose with your bent elbow or tissue when you cough or sneeze. Then dispose of the used tissue immediately and wash your hands. Why? Droplets spread virus. By following good respiratory hygiene, you protect the people around you from viruses such as cold, flu and COVID-19.</li>
+                          <li>Stay home and self-isolate even with minor symptoms such as cough, headache, mild fever, until you recover. Have someone bring you supplies. If you need to leave your house, wear a mask to avoid infecting others. Why? Avoiding contact with others will protect them from possible COVID-19 and other viruses.</li>
+                          <li>If you have a fever, cough and difficulty breathing, seek medical attention, but call by telephone in advance if possible and follow the directions of your local health authority. Why? National and local authorities will have the most up to date information on the situation in your area. Calling in advance will allow your health care provider to quickly direct you to the right health facility. This will also protect you and help prevent spread of viruses and other infections.</li>
+                          <li>Keep up to date on the latest information from trusted sources, such as WHO or your local and national health authorities. Why? Local and national authorities are best placed to advise on what people in your area should be doing to protect themselves.</li>
+                      </ul>
+                  </div>
+                   <div style="color: coral" class="mt-3">
+                          Previous questions :
+                        <a href="#1" style="text-decoration: underline">1</a>
+                            &nbsp;
+                         <a href="#2" style="text-decoration: underline">2</a>
+                               &nbsp;
+                         <a href="#3" style="text-decoration: underline">3</a>
+                             &nbsp;
+                         <a href="#4" style="text-decoration: underline">4</a>
+                            &nbsp;
+                         <a href="#5" style="text-decoration: underline">5</a>
+                          &nbsp;
+                         <a href="#6" style="text-decoration: underline">6</a>
+                              &nbsp;
+                         <a href="#7" style="text-decoration: underline">7</a>
+                           &nbsp;
+                         <a href="#8" style="text-decoration: underline">8</a>
+                         &nbsp;
+                         <a href="#9" style="text-decoration: underline">9</a>
+                         &nbsp;
+                         <a href="#10" style="text-decoration: underline">10</a>
+                      &nbsp;
+                         <a href="#11" style="text-decoration: underline">11</a>
+                       &nbsp;
+                         <a href="#12" style="text-decoration: underline">12</a>
+                    </div>
+
+
+              </div>
+            </div>
+             <div class="col-12 card border-light mb-3" >
+              <div class="card-header text-center" ><h2 style="color: cornflowerblue" id="14">14- Is there a vaccine, drug or treatment for COVID-19 ?</h2></div>
+              <div class="card-body">
+
+                <div class="card-text" style="font-size: 25px">
+                    <p>
+                       While some western, traditional or home remedies may provide comfort and alleviate symptoms of mild COVID-19, there are no medicines that have been shown to prevent or cure the disease. WHO does not recommend self-medication with any medicines, including antibiotics, as a prevention or cure for COVID-19. However, there are several ongoing clinical trials of both western and traditional medicines. WHO is coordinating efforts to develop vaccines and medicines to prevent and treat COVID-19 and will continue to provide updated information as soon research results become available.
+
+                    </p>
+                    <p>
+                       The most effective ways to protect yourself and others against COVID-19 are to:
+                    </p>
+                    <ul>
+                        <li>Clean your hands frequently and thoroughly</li>
+                        <li>Avoid touching your eyes, mouth and nose</li>
+                        <li>Cover your cough with the bend of elbow or tissue. If a tissue is used, discard it immediately and wash your hands.</li>
+                        <li>Maintain a distance of at least 1 metre from others. </li>
+                    </ul>
+                </div>
+                  <div style="color: coral" class="mt-3">
+                          Previous questions :
+                        <a href="#1" style="text-decoration: underline">1</a>
+                            &nbsp;
+                         <a href="#2" style="text-decoration: underline">2</a>
+                               &nbsp;
+                         <a href="#3" style="text-decoration: underline">3</a>
+                             &nbsp;
+                         <a href="#4" style="text-decoration: underline">4</a>
+                            &nbsp;
+                         <a href="#5" style="text-decoration: underline">5</a>
+                          &nbsp;
+                         <a href="#6" style="text-decoration: underline">6</a>
+                              &nbsp;
+                         <a href="#7" style="text-decoration: underline">7</a>
+                           &nbsp;
+                         <a href="#8" style="text-decoration: underline">8</a>
+                         &nbsp;
+                         <a href="#9" style="text-decoration: underline">9</a>
+                         &nbsp;
+                         <a href="#10" style="text-decoration: underline">10</a>
+                      &nbsp;
+                         <a href="#11" style="text-decoration: underline">11</a>
+                       &nbsp;
+                         <a href="#12" style="text-decoration: underline">12</a>
+                      &nbsp;
+                         <a href="#13" style="text-decoration: underline">13</a>
+                    </div>
+              </div>
+            </div>
+             <div class="col-12 card border-light mb-3" >
+              <div class="card-header text-center" ><h2 style="color: cornflowerblue" id="15">15- Does WHO recommend wearing medical masks to prevent the spread of COVID-19 ?</h2></div>
+              <div class="card-body">
+                  <div class="card-text" style="font-size: 25px">
+                      <p>Currently, there is not enough evidence for or against the use of masks (medical or other) in healthy individuals in the wider community. However, WHO is actively studying the rapidly evolving science on masks and continuously updates its guidance.
+                      </p>
+                      <p>
+                          <b>Medical masks </b> are recommended primarily in health care settings, but can be considered in other circumstances (see below). Medical masks should be combined with other key infection prevention and control measures such as hand hygiene and physical distancing.
+
+                      </p>
+                      <h2><b>Healthcare workers</b></h2>
+                      <p>
+                          <b>Why? </b> Medical masks and respirators such as N95, FFP2 or equivalent are recommended for and should be reserved for, healthcare workers while giving care to patients. Close contact with people with suspected or confirmed COVID-19 and their surrounding environment are the main routes of transmission, which means healthcare workers are the most exposed.
+                      </p>
+                      <h2><b>People who are sick and exhibiting symptoms of COVID-19</b></h2>
+                      <p>
+                          <b>Why? </b> Anyone who is sick, with mild symptoms such as muscle aches, slight cough, sore throat or fatigue, should isolate at home and use a medical mask according to WHO’s recommendation on home care of patients with suspected COVID-19. Coughing, sneezing or talking can generate droplets that cause can spread the infection. These droplets can reach the face of others nearby and land on the surrounding environment. If an infected person coughs, sneezes, or talks while wearing a medical mask, this can help to protect those nearby from infection. If a sick person needs to go to a health facility they should wear a medical mask.
+                      </p>
+                      <h2><b>Anyone taking care of a person at home who is sick with COVID-19</b></h2>
+                      <p>
+                          <b>Why?</b>Those caring for individuals who are sick with COVID-19 should wear a medical mask for protection. Again, close, frequent and prolonged contact with someone with COVID-19 puts caretakers at high risk. National decision makers may also choose to recommend medical mask use for certain individuals using a risk-based approach. This approach takes into consideration the purpose of the mask, risk of exposure and vulnerability of the wearer, the setting, the feasibility of use and the types of masks to be considered.
+                      </p>
+
+
+                  </div>
+                   <div style="color: coral" class="mt-3">
+                          Previous questions :
+                        <a href="#1" style="text-decoration: underline">1</a>
+                            &nbsp;
+                         <a href="#2" style="text-decoration: underline">2</a>
+                               &nbsp;
+                         <a href="#3" style="text-decoration: underline">3</a>
+                             &nbsp;
+                         <a href="#4" style="text-decoration: underline">4</a>
+                            &nbsp;
+                         <a href="#5" style="text-decoration: underline">5</a>
+                          &nbsp;
+                         <a href="#6" style="text-decoration: underline">6</a>
+                              &nbsp;
+                         <a href="#7" style="text-decoration: underline">7</a>
+                           &nbsp;
+                         <a href="#8" style="text-decoration: underline">8</a>
+                         &nbsp;
+                         <a href="#9" style="text-decoration: underline">9</a>
+                         &nbsp;
+                         <a href="#10" style="text-decoration: underline">10</a>
+                      &nbsp;
+                         <a href="#11" style="text-decoration: underline">11</a>
+                       &nbsp;
+                         <a href="#12" style="text-decoration: underline">12</a>
+                      &nbsp;
+                         <a href="#13" style="text-decoration: underline">13</a>
+                       &nbsp;
+                         <a href="#14" style="text-decoration: underline">14</a>
+                    </div>
+
+
+              </div>
+            </div>
+             <div class="col-12 card border-light mb-3" >
+              <div class="card-header text-center" ><h2 style="color: cornflowerblue" id="16">16- How to properly wear a medical mask ?</h2></div>
+              <div class="card-body">
+
+                <div class="card-text" style="font-size: 25px">
+                    <p>If you choose to wear a mask:</p>
+                    <ol>
+                        <li>Before touching the mask, clean hands with an alcohol-based hand rub or soap and water</li>
+                        <li>Take the mask and inspect it for tears or holes.</li>
+                        <li>Orient which side is the top side (where the metal strip is).</li>
+                        <li>Ensure the proper side of the mask faces outwards (the coloured side).</li>
+                        <li>Place the mask to your face. Pinch the metal strip or stiff edge of the mask so it moulds to the shape of your nose.</li>
+                        <li>Pull down the mask’s bottom so it covers your mouth and your chin.</li>
+                        <li>Do not touch the mask while you are wearing it for protection.</li>
+                        <li>After use, take off the mask with clean hands; remove the elastic loops from behind the ears while keeping the mask away from your face and clothes, to avoid touching potentially contaminated surfaces of the mask.</li>
+                        <li>Discard the mask in a closed bin immediately after use. Do not reuse the mask.</li>
+                        <li>Perform hand hygiene after touching or discarding the mask – Use alcohol-based hand rub or, if visibly soiled, wash your hands with soap and water.</li>
+                    </ol>
+                    <p>
+                        Be aware that there is a global shortage of medical masks (both surgical masks and N95 masks). These should be reserved as much as possible for health care workers.
+                    </p>
+                    <p>
+                        Remember that  masks are not a substitute for other, more effective ways to protect yourself and others against COVID-19 such as frequently washing your hands, covering your cough with the bend of elbow or tissue and maintain a distance of at least 1 meter from others. See <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/when-and-how-to-use-masks" target="_blank" style="color: darkseagreen;text-decoration: underline">basic protective measures against the new coronavirus</a> for more information.
+                    </p>
+                    <p>Follow the advice of your national health authority on the use of masks.</p>
+                </div>
+                   <div style="color: coral" class="mt-3">
+                          Previous questions :
+                        <a href="#1" style="text-decoration: underline">1</a>
+                            &nbsp;
+                         <a href="#2" style="text-decoration: underline">2</a>
+                               &nbsp;
+                         <a href="#3" style="text-decoration: underline">3</a>
+                             &nbsp;
+                         <a href="#4" style="text-decoration: underline">4</a>
+                            &nbsp;
+                         <a href="#5" style="text-decoration: underline">5</a>
+                          &nbsp;
+                         <a href="#6" style="text-decoration: underline">6</a>
+                              &nbsp;
+                         <a href="#7" style="text-decoration: underline">7</a>
+                           &nbsp;
+                         <a href="#8" style="text-decoration: underline">8</a>
+                         &nbsp;
+                         <a href="#9" style="text-decoration: underline">9</a>
+                         &nbsp;
+                         <a href="#10" style="text-decoration: underline">10</a>
+                      &nbsp;
+                         <a href="#11" style="text-decoration: underline">11</a>
+                       &nbsp;
+                         <a href="#12" style="text-decoration: underline">12</a>
+                      &nbsp;
+                         <a href="#13" style="text-decoration: underline">13</a>
+                       &nbsp;
+                         <a href="#14" style="text-decoration: underline">14</a>
+                       &nbsp;
+                         <a href="#15" style="text-decoration: underline">15</a>
+                    </div>
+              </div>
+            </div>
+             <div class="col-12 card border-light mb-3" >
+              <div class="card-header text-center" ><h2 style="color: cornflowerblue" id="17">17- How long does it take after exposure to COVID-19 to develop symptoms ?</h2></div>
+              <div class="card-body">
+
+                <p class="card-text" style="font-size: 25px">
+                    The time between exposure to COVID-19 and the moment when symptoms start is commonly around five to six days but can range from 1 – 14 days.
+                </p>
+                  <div style="color: coral" class="mt-3">
+                          Previous questions :
+                        <a href="#1" style="text-decoration: underline">1</a>
+                            &nbsp;
+                         <a href="#2" style="text-decoration: underline">2</a>
+                               &nbsp;
+                         <a href="#3" style="text-decoration: underline">3</a>
+                             &nbsp;
+                         <a href="#4" style="text-decoration: underline">4</a>
+                            &nbsp;
+                         <a href="#5" style="text-decoration: underline">5</a>
+                          &nbsp;
+                         <a href="#6" style="text-decoration: underline">6</a>
+                              &nbsp;
+                         <a href="#7" style="text-decoration: underline">7</a>
+                           &nbsp;
+                         <a href="#8" style="text-decoration: underline">8</a>
+                         &nbsp;
+                         <a href="#9" style="text-decoration: underline">9</a>
+                         &nbsp;
+                         <a href="#10" style="text-decoration: underline">10</a>
+                      &nbsp;
+                         <a href="#11" style="text-decoration: underline">11</a>
+                       &nbsp;
+                         <a href="#12" style="text-decoration: underline">12</a>
+                      &nbsp;
+                         <a href="#13" style="text-decoration: underline">13</a>
+                       &nbsp;
+                         <a href="#14" style="text-decoration: underline">14</a>
+                       &nbsp;
+                         <a href="#15" style="text-decoration: underline">15</a>
+                       &nbsp;
+                         <a href="#16" style="text-decoration: underline">16</a>
+                    </div>
+              </div>
+            </div>
+             <div class="col-12 card border-light mb-3" >
+              <div class="card-header text-center" ><h2 style="color: cornflowerblue" id="18">18- What is the connection between COVID-19 and animals ?</h2></div>
+              <div class="card-body">
+
+                <p class="card-text" style="font-size: 25px">
+                    COVID-19 is spread through human-to-human transmission.
+                        <br>
+                        <br>
+                        We already know a lot about other viruses in the coronavirus family and most of these types of viruses have an origin in animals. The COVID-19 virus (also called SARS-CoV-2) is a new virus in humans. The possible animal source of COVID-19 has not yet been confirmed but research is ongoing.
+                        <br>
+                        <br>
+                        WHO continues to monitor the latest research on this and other COVID-19 topics and will update, as new findings are available.
+                </p>
+                  <div style="color: coral" class="mt-3">
+                          Previous questions :
+                        <a href="#1" style="text-decoration: underline">1</a>
+                            &nbsp;
+                         <a href="#2" style="text-decoration: underline">2</a>
+                               &nbsp;
+                         <a href="#3" style="text-decoration: underline">3</a>
+                             &nbsp;
+                         <a href="#4" style="text-decoration: underline">4</a>
+                            &nbsp;
+                         <a href="#5" style="text-decoration: underline">5</a>
+                          &nbsp;
+                         <a href="#6" style="text-decoration: underline">6</a>
+                              &nbsp;
+                         <a href="#7" style="text-decoration: underline">7</a>
+                           &nbsp;
+                         <a href="#8" style="text-decoration: underline">8</a>
+                         &nbsp;
+                         <a href="#9" style="text-decoration: underline">9</a>
+                         &nbsp;
+                         <a href="#10" style="text-decoration: underline">10</a>
+                      &nbsp;
+                         <a href="#11" style="text-decoration: underline">11</a>
+                       &nbsp;
+                         <a href="#12" style="text-decoration: underline">12</a>
+                      &nbsp;
+                         <a href="#13" style="text-decoration: underline">13</a>
+                       &nbsp;
+                         <a href="#14" style="text-decoration: underline">14</a>
+                       &nbsp;
+                         <a href="#15" style="text-decoration: underline">15</a>
+                       &nbsp;
+                         <a href="#16" style="text-decoration: underline">16</a>
+                      &nbsp;
+                         <a href="#17" style="text-decoration: underline">17</a>
+                    </div>
+              </div>
+            </div>
+             <div class="col-12 card border-light mb-3" >
+              <div class="card-header text-center" ><h2 style="color: cornflowerblue" id="19">19- Can I catch COVID-19 from my pet or other animals ?</h2></div>
+              <div class="card-body">
+
+                <p class="card-text" style="font-size: 25px">
+                    Several dogs and cats (domestic cats and tigers) in contact with infected humans have tested positive for COVID-19. In addition, ferrets appear to be susceptible to the infection. In experimental conditions, both cats and ferrets were able to transmit infection to other animals of the same species. However, there is no evidence that these animals can transmit the disease to humans and spread COVID-19. COVID-19 is mainly spread through droplets produced when an infected person coughs, sneezes, or speaks.
+                    <br>
+                    <br>
+                    Minks raised in farms have also been detected with the virus. Most likely, they have been infected by farm workers. In a few instances, the minks that were infected by humans have transmitted the virus to other people. These are the first reported cases of animal-to-human transmission.
+                    <br>
+                    <br>
+                    It is still recommended that people who are sick with COVID-19 and people who are at risk limit contact with companion and other animals. When handling and caring for animals, basic hygiene measures should always be implemented. This includes hand washing after handling animals, their food or supplies, as well as avoiding kissing, licking or sharing food.
+                    <br>
+                    <br>
+                    More recommendations are available on the OIE website: <a href="https://www.oie.int/en/scientific-expertise/specific-information-and-recommendations/questions-and-answers-on-2019novel-coronavirus/" target="_blank" style="color: darkseagreen;text-decoration: underline">https://www.oie.int/en/scientific-expertise/specific-information-and-recommendations/questions-and-answers-on-2019novel-coronavirus/</a>
+                    <br>
+                    <br>
+                    WHO continues to monitor the latest research on this and other COVID-19 topics and will update as new findings are available.
+                </p>
+                   <div style="color: coral" class="mt-3">
+                          Previous questions :
+                        <a href="#1" style="text-decoration: underline">1</a>
+                            &nbsp;
+                         <a href="#2" style="text-decoration: underline">2</a>
+                               &nbsp;
+                         <a href="#3" style="text-decoration: underline">3</a>
+                             &nbsp;
+                         <a href="#4" style="text-decoration: underline">4</a>
+                            &nbsp;
+                         <a href="#5" style="text-decoration: underline">5</a>
+                          &nbsp;
+                         <a href="#6" style="text-decoration: underline">6</a>
+                              &nbsp;
+                         <a href="#7" style="text-decoration: underline">7</a>
+                           &nbsp;
+                         <a href="#8" style="text-decoration: underline">8</a>
+                         &nbsp;
+                         <a href="#9" style="text-decoration: underline">9</a>
+                         &nbsp;
+                         <a href="#10" style="text-decoration: underline">10</a>
+                      &nbsp;
+                         <a href="#11" style="text-decoration: underline">11</a>
+                       &nbsp;
+                         <a href="#12" style="text-decoration: underline">12</a>
+                      &nbsp;
+                         <a href="#13" style="text-decoration: underline">13</a>
+                       &nbsp;
+                         <a href="#14" style="text-decoration: underline">14</a>
+                       &nbsp;
+                         <a href="#15" style="text-decoration: underline">15</a>
+                       &nbsp;
+                         <a href="#16" style="text-decoration: underline">16</a>
+                      &nbsp;
+                         <a href="#17" style="text-decoration: underline">17</a>
+                       &nbsp;
+                         <a href="#18" style="text-decoration: underline">18</a>
+                    </div>
+              </div>
+            </div>
+             <div class="col-12 card border-light mb-3" >
+              <div class="card-header text-center" ><h2 style="color: cornflowerblue" id="20">20- How long does the virus survive on surfaces ?</h2></div>
+              <div class="card-body">
+
+                <p class="card-text" style="font-size: 25px">
+                    The most important thing to know about coronavirus on surfaces is that they can easily be cleaned with common household disinfectants that will kill the virus. Studies have shown that the COVID-19 virus can survive for up to 72 hours on plastic and stainless steel, less than 4 hours on copper and less than 24 hours on cardboard.
+                    <br>
+                    <br>
+                    As, always clean your hands with an alcohol-based hand rub or wash them with soap and water. Avoid touching your eyes, mouth, or nose.
+                </p>
+
+                   <div style="color: coral" class="mt-3">
+                          Previous questions :
+                        <a href="#1" style="text-decoration: underline">1</a>
+                            &nbsp;
+                         <a href="#2" style="text-decoration: underline">2</a>
+                               &nbsp;
+                         <a href="#3" style="text-decoration: underline">3</a>
+                             &nbsp;
+                         <a href="#4" style="text-decoration: underline">4</a>
+                            &nbsp;
+                         <a href="#5" style="text-decoration: underline">5</a>
+                          &nbsp;
+                         <a href="#6" style="text-decoration: underline">6</a>
+                              &nbsp;
+                         <a href="#7" style="text-decoration: underline">7</a>
+                           &nbsp;
+                         <a href="#8" style="text-decoration: underline">8</a>
+                         &nbsp;
+                         <a href="#9" style="text-decoration: underline">9</a>
+                         &nbsp;
+                         <a href="#10" style="text-decoration: underline">10</a>
+                      &nbsp;
+                         <a href="#11" style="text-decoration: underline">11</a>
+                       &nbsp;
+                         <a href="#12" style="text-decoration: underline">12</a>
+                      &nbsp;
+                         <a href="#13" style="text-decoration: underline">13</a>
+                       &nbsp;
+                         <a href="#14" style="text-decoration: underline">14</a>
+                       &nbsp;
+                         <a href="#15" style="text-decoration: underline">15</a>
+                       &nbsp;
+                         <a href="#16" style="text-decoration: underline">16</a>
+                      &nbsp;
+                         <a href="#17" style="text-decoration: underline">17</a>
+                       &nbsp;
+                         <a href="#18" style="text-decoration: underline">18</a>
+                       &nbsp;
+                         <a href="#19" style="text-decoration: underline">19</a>
+                    </div>
+              </div>
+            </div>
+             <div class="col-12 card border-light mb-3" >
+              <div class="card-header text-center" ><h2 style="color: cornflowerblue" id="21">21- Are antibiotics effective in preventing or treating COVID-19 ?</h2></div>
+              <div class="card-body">
+
+                <p class="card-text" style="font-size: 25px">
+                    No. Antibiotics do not work against viruses; they only work on bacterial infections. COVID-19 is caused by a virus, so antibiotics do not work. Antibiotics should not be used as a means of prevention or treatment of COVID-19. In hospitals physicians will sometimes use antibiotics to prevent or treat secondary bacterial infections which can be a complication of COVID-19 in severely ill patients. They should only be used as directed by a physician to treat a bacterial infection.
+                </p>
+                  <div style="color: coral" class="mt-3">
+                          Previous questions :
+                        <a href="#1" style="text-decoration: underline">1</a>
+                            &nbsp;
+                         <a href="#2" style="text-decoration: underline">2</a>
+                               &nbsp;
+                         <a href="#3" style="text-decoration: underline">3</a>
+                             &nbsp;
+                         <a href="#4" style="text-decoration: underline">4</a>
+                            &nbsp;
+                         <a href="#5" style="text-decoration: underline">5</a>
+                          &nbsp;
+                         <a href="#6" style="text-decoration: underline">6</a>
+                              &nbsp;
+                         <a href="#7" style="text-decoration: underline">7</a>
+                           &nbsp;
+                         <a href="#8" style="text-decoration: underline">8</a>
+                         &nbsp;
+                         <a href="#9" style="text-decoration: underline">9</a>
+                         &nbsp;
+                         <a href="#10" style="text-decoration: underline">10</a>
+                      &nbsp;
+                         <a href="#11" style="text-decoration: underline">11</a>
+                       &nbsp;
+                         <a href="#12" style="text-decoration: underline">12</a>
+                      &nbsp;
+                         <a href="#13" style="text-decoration: underline">13</a>
+                       &nbsp;
+                         <a href="#14" style="text-decoration: underline">14</a>
+                       &nbsp;
+                         <a href="#15" style="text-decoration: underline">15</a>
+                       &nbsp;
+                         <a href="#16" style="text-decoration: underline">16</a>
+                      &nbsp;
+                         <a href="#17" style="text-decoration: underline">17</a>
+                       &nbsp;
+                         <a href="#18" style="text-decoration: underline">18</a>
+                       &nbsp;
+                         <a href="#19" style="text-decoration: underline">19</a>
+                      &nbsp;
+                         <a href="#20" style="text-decoration: underline">20</a>
+                    </div>
+              </div>
+            </div>
+             <div class="col-12 card border-light mb-3" >
+              <div class="card-header text-center" ><h2 style="color: cornflowerblue " id="22">22-Can I catch COVID-19 from the faeces of someone with the disease ?</h2></div>
+              <div class="card-body">
+
+                <p class="card-text" style="font-size: 25px">
+                    While initial investigations suggest the virus may be present in faeces in some cases, to date, there have not been reports of faecal-oral transmission of COVID-19. Additionally, there is no evidence to date on the survival of the COVID-19 virus in water or sewage.
+                    <br>
+                    <br>
+                    WHO is assessing ongoing research on the ways COVID-19 is spread and will continue to share new findings on this topic.
+                </p>
+                  <div style="color: coral" class="mt-3">
+                          Previous questions :
+                        <a href="#1" style="text-decoration: underline">1</a>
+                            &nbsp;
+                         <a href="#2" style="text-decoration: underline">2</a>
+                               &nbsp;
+                         <a href="#3" style="text-decoration: underline">3</a>
+                             &nbsp;
+                         <a href="#4" style="text-decoration: underline">4</a>
+                            &nbsp;
+                         <a href="#5" style="text-decoration: underline">5</a>
+                          &nbsp;
+                         <a href="#6" style="text-decoration: underline">6</a>
+                              &nbsp;
+                         <a href="#7" style="text-decoration: underline">7</a>
+                           &nbsp;
+                         <a href="#8" style="text-decoration: underline">8</a>
+                         &nbsp;
+                         <a href="#9" style="text-decoration: underline">9</a>
+                         &nbsp;
+                         <a href="#10" style="text-decoration: underline">10</a>
+                      &nbsp;
+                         <a href="#11" style="text-decoration: underline">11</a>
+                       &nbsp;
+                         <a href="#12" style="text-decoration: underline">12</a>
+                      &nbsp;
+                         <a href="#13" style="text-decoration: underline">13</a>
+                       &nbsp;
+                         <a href="#14" style="text-decoration: underline">14</a>
+                       &nbsp;
+                         <a href="#15" style="text-decoration: underline">15</a>
+                       &nbsp;
+                         <a href="#16" style="text-decoration: underline">16</a>
+                      &nbsp;
+                         <a href="#17" style="text-decoration: underline">17</a>
+                       &nbsp;
+                         <a href="#18" style="text-decoration: underline">18</a>
+                       &nbsp;
+                         <a href="#19" style="text-decoration: underline">19</a>
+                      &nbsp;
+                         <a href="#20" style="text-decoration: underline">20</a>
+                      &nbsp;
+                         <a href="#21" style="text-decoration: underline">21</a>
+                    </div>
+              </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+{% endblock content %}

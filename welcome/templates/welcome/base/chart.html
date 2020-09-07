@@ -1,0 +1,233 @@
+
+var endpoint='{% url "api-chart-data" %}' // {% url "api-data" %}
+$.ajax({
+    method:"GET",
+    url : endpoint ,
+    success : function(data){
+        console.log(data.all_countries);
+        var ctx = document.getElementById('myChart');
+        var myChart = new Chart(ctx, {
+            options : {
+                legend : {
+                    display : true,
+                     labels: {
+
+                         fontSize : 32,
+                         boxWidth:0,
+                         fontFamily : 'Arial'
+                    }
+                },
+               
+
+            },
+            type: 'bar',
+            data: {
+                labels: data.continents_names,
+                datasets: [{
+                    label: '',
+                    data: data.continents_cases,
+                    backgroundColor: [
+                         'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
+                'rgba(75, 192, 192, 0.5)',
+                'rgba(153, 102, 255, 0.5)',
+                'rgba(255, 159, 64, 0.5)'
+
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+                }]
+            },
+
+        }  )
+
+
+
+
+    },
+    error : function(error_data) {
+        console.log("error")
+        console.log(error_data)
+
+    }
+
+});
+
+
+
+//secondchart
+$.ajax({
+    method:"GET",
+    url : endpoint ,
+    success : function(data){
+         var ctx = document.getElementById('secondChart');
+        var secondChart = new Chart(ctx, {
+            options : {
+                legend : {
+                    display : true,
+                     labels: {
+
+                         fontSize : 32,
+                         boxWidth:30,
+                         fontFamily : 'Arial'
+                    }
+                },
+
+
+            },
+            type: 'doughnut',
+            data: {
+                labels: data.continents_names,
+                datasets: [{
+                    label: '',
+                    data: data.continents_active_cases,
+                    backgroundColor: [
+                         'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
+                'rgba(75, 192, 192, 0.5)',
+                'rgba(153, 102, 255, 0.5)',
+                'rgba(255, 159, 64, 0.5)'
+
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+                }]
+            },
+
+        }  )
+
+
+
+
+    },
+    error : function(error_data) {
+        console.log("error")
+        console.log(error_data)
+
+    }
+
+});
+//thirdchart
+$.ajax({
+    method:"GET",
+    url : endpoint ,
+    success : function(data){
+         var ctx = document.getElementById('thirdChart');
+        var thirdChart = new Chart(ctx, {
+            options : {
+                legend : {
+                    display : true,
+                     labels: {
+
+                         fontSize : 32,
+                         boxWidth:30,
+                         fontFamily : 'Arial'
+                    }
+                },
+
+
+            },
+            type: 'line',
+            data: {
+                labels: data.world_dates_day_by_day,
+                datasets: [{
+                    label: 'Cases per Day',
+                    data: data.world_cases_day_by_day,
+                    backgroundColor: [
+
+                'rgba(255, 206, 186, 0.4)'
+
+
+            ],
+            borderColor: [
+
+                'rgba(255, 206, 186, 1)'
+
+            ],
+            borderWidth: 1
+                }]
+            },
+
+        }  )
+
+
+
+
+    },
+    error : function(error_data) {
+        console.log("error")
+        console.log(error_data)
+
+    }
+
+});
+//fourthchart
+$.ajax({
+    method:"GET",
+    url : endpoint ,
+    success : function(data){
+         var ctx = document.getElementById('fourthChart');
+        var fourthChart = new Chart(ctx, {
+            options : {
+                legend : {
+                    display : true,
+                     labels: {
+
+                         fontSize : 32,
+                         boxWidth:30,
+                         fontFamily : 'Arial'
+                    }
+                },
+
+
+            },
+            type: 'line',
+            data: {
+                labels: data.world_dates_day_by_day,
+                datasets: [{
+                    label: 'Deaths per Day',
+                    data: data.world_deaths_day_by_day,
+                    backgroundColor: [
+
+
+
+                'rgba(255, 9, 64, 0.4)'
+
+            ],
+            borderColor: [
+
+                'rgba(255, 9, 64, 1)'
+            ],
+            borderWidth: 1
+                }]
+            },
+
+        }  )
+
+
+
+
+    },
+    error : function(error_data) {
+        console.log("error")
+        console.log(error_data)
+
+    }
+
+});

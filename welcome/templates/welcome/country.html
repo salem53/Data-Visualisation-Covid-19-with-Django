@@ -1,0 +1,142 @@
+{% extends 'welcome/base.html' %}
+{% load static %}
+<script>
+{% block jquery %}
+    {% include 'welcome/base/chart_country.html' %}
+
+{% endblock %}
+</script>
+
+
+{% block content %}
+    <div class="container" >
+        <div class="row row-content ">
+        <!-- cards content -->
+            <div class="col-sm-8 offset-sm-2 ">
+                <table class="table  table-borderless table-hover table-active">
+                    <tbody>
+                         <tr>
+                             <td class="text-center ">
+                                 <a href="{% url 'chart' %}" style="text-decoration: underline">WORLD</a>
+                                 <span> &nbsp; / </span>
+                                  <a href="{% url 'chart' %}#all_countries" style="text-decoration: underline"> &nbsp; COUNTRIES</a>
+                                 <a  > &nbsp; / &nbsp;
+                                     {% filter force_escape|upper %}
+                                        {{ country }}
+                                     {% endfilter %}
+                                 </a>
+
+                             </td>
+                         </tr>
+                    </tbody>
+                </table>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                 <span class="align-self-center  " style="font-size: 30px">
+                     <img  class="align-self-center" src="{% static 'img/png/' %}{{ country }}.png" style="height: 70px;width: 100px;">
+
+                      &nbsp;{% filter force_escape|upper %}
+                                        {{ country }}
+                                     {% endfilter %}
+                 </span>
+                 <br> <br><br>
+            </div>
+            <br> <br>
+            <div class=" col-sm-6 ">
+            <div class="card border-dark">
+                <div class="card-body text-center">
+                    <h1 >Coronavirus Cases : </h1>
+                    <h2  ><span class="cases">{{ total_cases }}</span>  </h2>
+                    <a href="{% url 'chart' %}#all_countries">View all countries </a>
+
+                </div>
+            </div>
+         </div>
+        <div class="col-sm-6 text-center ">
+            <div class="card border-secondary">
+                <div class="card-body">
+                    <h1>Total Deaths :  </h1>
+                     <h2><span class="deaths"> {{ total_deaths }}</span> </h2>
+                    <a href="{% url 'chart' %}#all_countries">View all countries </a>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class=" col-sm-6 mt-3">
+            <div class="card border-danger">
+                <div class="card-body text-center">
+                    <h1 ><span class="active_cases">Active Cases : </span></h1>
+                    <h2><span class="active">{{ active_cases }}</span>  </h2>
+                    <a href="{% url 'chart' %}#all_countries">View all countries </a>
+
+
+                </div>
+            </div>
+         </div>
+        <div class="col-sm-6 mt-3">
+            <div class="card border-success ">
+                <div class="card-body text-center">
+                     <h1><span class="total_recoverd">Total recovered :</span>  </h1>
+                    <h2><span class="recovered"> {{ total_recovered }}</span> </h2>
+                    <a href="{% url 'chart' %}#all_countries">View all countries </a>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+    </div>
+    <div class="row row-content">
+
+          <div class=" col-sm-5  card  text-center mt-5">
+             <div class="card-header">
+                    <h2 style="color: brown">Daily New Cases</h2>
+              </div>
+
+              <div class="card-body">
+
+                <canvas id="thirdChart" height="300px">
+
+                </canvas>
+
+              </div>
+              <div class="card-footer text-muted temps">
+                Last update :
+              </div>
+        </div>
+           <div class="offset-1 col-sm-5  card  text-center mt-5">
+             <div class="card-header">
+                    <h2 style="color: gray">Daily Deaths</h2>
+              </div>
+
+              <div class="card-body">
+
+                <canvas id="fourthChart" height="300px">
+
+                </canvas>
+
+              </div>
+              <div class="card-footer text-muted temps">
+                Last update :
+              </div>
+        </div>
+    </div>
+
+
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,116 @@
+{% load static %}
+<style type="text/css">
+    td {
+        font-size: 15px;
+    }
+    th {
+        font-size: 15px;
+    }
+</style>
+
+            <table class=" table table-bordered "
+>
+            <colgroup>
+                <col class="" />
+                <col class="" />
+                <col class="" />
+                <col class="yellow" />
+                <col class="" />
+                <col class="" />
+                <col class="" />
+                <col class=""/>
+                <col class="red" />
+                <col class="" />
+                <col class="" />
+                <col class="" />
+                <col class="" />
+                <col class="" />
+            </colgroup>
+            <thead>
+                <tr >
+                    <th scope="col" style="padding-bottom: 45px;padding-left: 20px" >#</th>
+                    <th scope="col" style="padding-bottom: 35px;padding-left: 20px">Country, Other</th>
+                    <th scope="col" style="padding-bottom: 35px;padding-left: 20px">Total Cases </th>
+                    <th scope="col" style="padding-bottom: 35px;padding-left: 20px">New Cases</th>
+                    <th scope="col" style="padding-bottom: 35px;padding-left: 20px">Total Deaths</th>
+
+                    <th scope="col" style="padding-bottom: 35px;padding-left: 20px">Total Recovered</th>
+                    <th scope="col" style="padding-bottom: 35px;padding-left: 20px">Active Cases</th>
+                    <th scope="col" style="padding-bottom: 35px;padding-left: 20px">Serious, Critical</th>
+                     <th scope="col" style="padding-bottom: 35px;padding-left: 20px">New Deaths</th>
+                    <th scope="col" style="padding-bottom: 35px;padding-left: 20px" >Total Tests</th>
+
+                    <th scope="col" >Total Cases/ 1M pop</th>
+                    <th scope="col">Total Deaths/ 1M <br> pop</th>
+                    <th scope="col" style="padding-bottom: 45px;padding-left: 20px"> Population</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background-color: #D9D7DB ">
+                    <th scope="row" ></th>
+                    <td>{{ europe_all.country }}</td>
+                    <td>{{ europe_all.confirmed}}</td>
+                    <td>+{{ europe_all.new_cases }}</td>
+                    <td>{{ europe_all.deaths }}</td>
+
+                    <td>{{ europe_all.recovered }}</td>
+                    <td>{{ europe_all.active }}</td>
+                    <td>{{ europe_all.critical }}</td>
+                     <td>+{{ europe_all.new_deaths }}</td>
+
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+
+                </tr>
+                {% for cnt in europe %}
+                    <tr>
+
+                        <th scope="row" >{{ forloop.counter }} </th>
+                        {% for k,v in cnt.items %}
+                            {% if  k  == 'new_cases'  %}
+                        <td style="background-color: #F5E5D1 ; padding-top: 40px" class="text-center"><b>{{ v }}</b></td>
+                            {% elif  k  == 'new_deaths' %}
+                                <td style="padding-top: 40px" class="bg-danger text-white " class="text-center"><b>{{ v }}</b></td>
+                            {% elif  k  == 'population' %}
+                                <td style="color: #82BCEF;padding-top: 40px" class="text-center"><b>{{ v }}</b></td>
+                            {% elif  k  == 'country' and v != 'Diamond Princess' and v != 'MS Zaandam' %}
+                        <td style="color: #82BCEF;" class="text-center"><a href="{% url 'country' v %} " style="text-decoration: underline;"  >{{ v }}</a>
+                            <br>
+                            <a href="{% url 'country' v %} " style="text-decoration: underline;"  >
+                                <img src="{% static 'img/png/' %}{{ v }}.png" style="height: 50px;width: 70px">
+                            </a>
+                        </td>
+                            {% else %}
+                                <td class="text-center;" style="padding-top: 40px"><b>{{ v }}</b></td>
+                            {% endif %}
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                   <tr style="background-color: #D9D7DB ">
+                    <th scope="row" ></th>
+                   <td style="padding-left: 80px"><b>Total:</b></td>
+                    <td>{{ europe_all.confirmed}}</td>
+                    <td>+{{ europe_all.new_cases }}</td>
+                    <td>{{ europe_all.deaths }}</td>
+
+                    <td>{{ europe_all.recovered }}</td>
+                    <td>{{ europe_all.active }}</td>
+                    <td>{{ europe_all.critical }}</td>
+                     <td>+{{ europe_all.new_deaths }}</td>
+
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+
+                </tr>
+
+            </tbody>
+        </table>

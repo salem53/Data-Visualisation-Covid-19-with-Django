@@ -1,0 +1,25 @@
+{% extends 'welcome/base.html' %}
+{% block content %}
+    <div class="container">
+      <div class="row  pt-5">
+        <div class="col-sm-8 offset-sm-2 ">
+                <table class="table  table-borderless table-hover table-active">
+                    <tbody>
+                         <tr>
+                             <td class="text-center ">
+                                 <a href="{% url 'chart' %}" style="text-decoration: underline; font-size: 28px">Home</a>
+                                 <span style="font-size: 28px"> &nbsp;/&nbsp;News </span>
+                             </td>
+                         </tr>
+                    </tbody>
+                </table>
+
+      </div>
+      </div>
+        <div class="row row-content">
+
+        </div>
+    </div>
+
+
+{% endblock content %}

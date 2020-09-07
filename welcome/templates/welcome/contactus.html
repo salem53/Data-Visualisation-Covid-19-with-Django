@@ -1,0 +1,203 @@
+{% extends 'welcome/base.html' %}
+{% block content %}
+    <div class="container">
+      <div class="row  pt-5">
+        <div class="col-sm-8 offset-sm-2 ">
+                <table class="table  table-borderless table-hover table-active">
+                    <tbody>
+                         <tr>
+                             <td class="text-center ">
+                                 <a href="{% url 'chart' %}" style="text-decoration: underline; font-size: 28px">Home</a>
+                                 <span style="font-size: 28px"> &nbsp;/&nbsp;Contact us </span>
+                             </td>
+                         </tr>
+                    </tbody>
+                </table>
+
+      </div>
+      </div>
+
+      <div class="row row-content mb-0 pb-0">
+
+        <div class="col-6 ">
+          <h2 class="text-center" >Location Information</h2> <br>
+          <h5 class="text-center">Our Address</h5>
+          <address class="text-center" style="font-size: 130%;">
+            2010,Manouba<br />
+            Manouba University Campus,<br />
+            Tunisia<br />
+            <i class="fa fa-phone"></i>: +216 71 600 444
+             <br />
+            <i class="fa fa-fax"></i>: +216 71 600 444<br />
+            <i class="fa fa-envelope"></i>:
+            <a href="mailto:salem.dhouimir@ensi-uma.tn">dataviz@ensi-uma.tn</a>
+
+            </address>
+          <br>
+          <div class="text-center">
+               <div class="btn-group " role="group">
+            <a href="tel:+21629161373" role="button" class="btn btn-primary"
+              ><i class="fa fa-phone"></i>Call</a
+            >
+            <a role="button" class="btn btn-info"
+              ><i class="fa fa-skype"></i>Skype</a
+            >
+            <a
+              href="mailto:salem.dhouimir@ensi-uma.tn"
+              role="button"
+              class="btn btn-success"
+              ><i class="fa fa-envelope-o"></i>Email</a>
+          </div>
+          </div>
+
+        </div>
+        <div class="col-6">
+          <div class="mapouter"><div class="gmap_canvas">
+            <iframe width="600" height="350" id="gmap_canvas" src="https://maps.google.com/maps?q=ecole%20nationale%20des%20sciences%20de%20l'informatique&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+
+            </iframe>
+            <a href="https://torrent9-site.org"></a></div><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div>
+        </div>
+
+      </div>
+
+      <div class="row row-content pb-0 mb-0">
+        <div class="col-12 mb-3 pb-3">
+          <h3 style="color: darkseagreen">Please fill this for if you want to receive daily updates about COVID-19 : </h3>
+        </div>
+        <div class="col-12 col-md-9 offset-sm-1">
+          <form method="post">
+            {% csrf_token %}
+            <div class="form-group row">
+              <label for="firstname" class="col-md-2 col-form-label"
+                >First Name</label>
+              <div class="col-md-10">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstname"
+                  name="firstname"
+                  placeholder="First Name" required
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="lastname" class="col-md-2 col-form-label"
+                >Last Name</label
+              >
+              <div class="col-md-10">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastname"
+                  name="lastname"
+                  placeholder="Last Name" required
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="telnum" class="col-12 col-md-2 col-form-label"
+                >Contact Tel.</label
+              >
+              <div class="col-5 col-md-3">
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="areacode"
+                  name="areacode"
+                  placeholder="Area code" required
+                />
+              </div>
+              <div class="col-7 col-md-7">
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="telnum"
+                  name="telnum"
+                  placeholder="Tel. number" required
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="emailid" class="col-md-2 col-form-label">Email</label>
+              <div class="col-md-10">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="emailid"
+                  name="emailid"
+                  placeholder="Email" required
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-md-6 offset-md-2">
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    name="approve"
+                    id="approve"
+                    value="yes"
+                  />
+                  <label class="form-check-label" for="approve">
+                    <strong>May we contact you?</strong>
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-3 offset-md-1">
+                <select class="form-control" required name="dropdown">
+                  <option value="Telephone">Tel.</option>
+                  <option value ="Email">Email</option>
+                </select>
+              </div>
+            </div>
+            <!--
+            <div class="form-group row">
+                 <label for="subject" class="col-md-2 col-form-label"
+                >Subject</label>
+              <div class="col-md-10">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="subject"
+                  name="subject"
+                  placeholder="Subject" required
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+
+
+              <label for="feedback" class="col-md-2 col-form-label"
+                >Your Feedback</label
+              >
+              <div class="col-md-10">
+                <textarea required
+                  class="form-control"
+                  id="feedback"
+                  name="feedback"
+                  rows="12"
+                ></textarea>
+              </div>
+            </div>
+            -->
+            <div class="form-group row">
+              <div class="offset-md-4 col-md-10">
+                <button type="submit" class="btn btn-primary">
+                  Submit
+                </button>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  <button type="reset" class="btn btn-success">
+                  Reset
+                </button>
+              </div>
+
+            </div>
+          </form>
+        </div>
+        <div class="col-12 col-md"></div>
+      </div>
+    </div>
+
+{% endblock content %}

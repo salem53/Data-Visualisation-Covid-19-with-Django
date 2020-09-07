@@ -1,0 +1,209 @@
+{% extends 'welcome/base.html' %}
+
+<script>
+{% block jquery %}
+    {% include 'welcome/base/chart.html' %}
+
+{% endblock jquery %}
+</script>
+-->
+{% block content %}
+
+<div class="container">
+
+
+    <div class="row row-content ">
+
+        <!-- cards content -->
+        {% include 'welcome/base/_cards.html' %}
+    </div>
+     <div class="row row-content">
+         <div class=" col-sm-5 card text-center ">
+                <div class="card-header">
+                    <h2>Total Cases By continent</h2>
+              </div>
+              <div class="card-body">
+
+                <canvas id="myChart" height="300px">
+
+                </canvas>
+
+              </div>
+              <div class="card-footer text-muted temps">
+                Last update :
+              </div>
+        </div>
+        <div class="offset-1 col-sm-5  card  text-center">
+             <div class="card-header">
+                    <h2 style="color: red">Active Cases By continent</h2>
+              </div>
+
+              <div class="card-body">
+
+                <canvas id="secondChart" height="300px">
+
+                </canvas>
+
+              </div>
+              <div class="card-footer text-muted temps">
+                Last update :
+              </div>
+        </div>
+          <div class=" col-sm-5  card  text-center mt-5">
+             <div class="card-header">
+                    <h2 style="color: brown">Daily New Cases</h2>
+              </div>
+
+              <div class="card-body">
+
+                <canvas id="thirdChart" height="300px">
+
+                </canvas>
+
+              </div>
+              <div class="card-footer text-muted temps">
+                Last update :
+              </div>
+        </div>
+           <div class="offset-1 col-sm-5  card  text-center mt-5">
+             <div class="card-header">
+                    <h2 style="color: gray">Daily Deaths</h2>
+              </div>
+
+              <div class="card-body">
+
+                <canvas id="fourthChart" height="300px">
+
+                </canvas>
+
+              </div>
+              <div class="card-footer text-muted temps">
+                Last update :
+              </div>
+        </div>
+    </div>
+    <div class="row row-content " id="all_countries">
+        <div class="col-sm-8">
+            <h3>
+                Reported Cases and Deaths by Country, Territory, or Conveyance
+            </h3>
+            <br>
+            <p>
+                The <b> coronavirus  </b> COVID-19 is affecting <b> 215 countries and territories </b> around the world
+                and 2 international conveyances. <b> The day is reset after midnight GMT+0.</b>
+                The list of countries and territories and their continental regional classification is based
+                on the <a target="_blank" href="https://unstats.un.org/unsd/methodology/m49/" > United Nations Geoscheme</a> .
+            </p>
+            <br>
+            <br>
+         </div>
+            <!-- tab/pills  -->
+
+             <!-- end tab/pills-->
+
+
+             <!-- table content -->
+           
+            <div class="col-sm-12 " >
+               <ul class="nav nav-tabs ">
+                   <li class="nav-item ">
+                      <a class="nav-link  btn btn-secondary " href="#all" role="tab" id="all-btn"
+                        data-toggle="tab">ALL</a>
+                    </li>
+                   &nbsp;
+
+                    <li class="nav-item">
+                      <a class="nav-link btn btn-primary" href="#europe" role="tab" id="europe-btn"
+                        data-toggle="tab">Europe</a>
+                    </li>
+                    &nbsp;
+                    <li class="nav-item">
+                      <a class="nav-link btn btn-primary" href="#north_america"role="tab" id="north_america-btn"
+                        data-toggle="tab">North America</a>
+                    </li>
+                    &nbsp;
+                    <li class="nav-item">
+                      <a class="nav-link btn btn-primary" href="#asia" role="tab" id="asia-btn"
+                        data-toggle="tab">Asia</a>
+                    </li>
+                    &nbsp;
+                     <li class="nav-item">
+                      <a class="nav-link btn btn-primary" href="#south_america" role="tab" id="south_america-btn"
+                        data-toggle="tab">South America</a>
+                    </li>
+                    &nbsp;
+                     <li class="nav-item">
+                      <a class="nav-link btn btn-primary" href="#africa" role="tab" id="africa-btn"
+                        data-toggle="tab">Africa</a>
+                    </li>
+                   &nbsp;
+
+                     <li class="nav-item">
+                      <a class="nav-link btn btn-primary" href="#oceania" role="tab" id="oceania-btn"
+                        data-toggle="tab">Oceania</a>
+                    </li>
+                </ul>
+                <br>
+            <div class=" tab-content">
+                  <div role="tabpanel" class="tab-pane fade show active" id="all">
+                    {% include 'welcome/base/_table_world.html' %}
+                </div>
+                <div role="tabpanel" class="tab-pane fade show " id="europe">
+                    {% include 'welcome/base/_table_europe.html' %}
+                </div>
+
+
+                  <div role="tabpanel" class="tab-pane fade show " id="north_america">
+                    {% include 'welcome/base/_table_north_america.html' %}
+                </div>
+                 <div role="tabpanel" class="tab-pane fade show " id="south_america">
+                    {% include 'welcome/base/_table_south_america.html' %}
+                </div>
+                 <div role="tabpanel" class="tab-pane fade show " id="asia">
+                    {% include 'welcome/base/_table_asia.html' %}
+                </div>
+                 <div role="tabpanel" class="tab-pane fade show " id="oceania">
+                    {% include 'welcome/base/_table_oceania.html' %}
+                </div>
+                 <div role="tabpanel" class="tab-pane fade show " id="africa">
+                    {% include 'welcome/base/_table_africa.html' %}
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+</div>
+
+<!--
+        <div class='row'>
+        <div class='col-sm-6' url-endpoint='{% url "api-data" %}'>
+
+            <canvas id="myChart" width="100" height="100"></canvas>
+
+        </div>
+        <div class='col-sm-6' url-endpoint='{% url "api-data" %}'>
+            <canvas id="secondChart" width="100" height="100"></canvas>
+
+
+
+        </div>
+    </div>
+     <div>
+        <iframe src="https://ourworldindata.org/coronavirus-data-explorer?yScale=log&zoomToSelection=true&country=USA~KOR~DEU~IND~BRA~ITA~IDN~ZAF~MEX~NZL~NOR~COG&casesMetric=true&dailyFreq=true&aligned=true&smoothing=7&pickerMetric=location&pickerSort=asc" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+    </div>
+    -->
+
+
+
+</div>
+
+
+{% endblock content %}

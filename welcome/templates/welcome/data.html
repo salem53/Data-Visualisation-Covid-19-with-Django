@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>data</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            {% for i in column %}
+        <th>{{ i }}</th>
+        {% endfor %}
+        </tr>
+        {% for j in range %}
+        <tr>
+
+            {% for k in j %}
+                <td>{{ k }}</td>
+              {% endfor %}
+
+
+
+
+
+
+        </tr>
+        {% endfor %}
+    </table>
+    <img src="data:image/png;base64,{{ data }}" alt="" height="250" ,width="250">
+
+</body>
+</html>

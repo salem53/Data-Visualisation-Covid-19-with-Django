@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'img/site.webmanifest' %}">
+    <link rel="mask-icon" href="{% static 'img/safari-pinned-tab.svg' %}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>DataVIZ</title>
+
+    {% include 'welcome/base/css.html' %}
+    {% include 'welcome/base/bootstrap_defaults.html' %}
+  </head>
+  <body>
+    <nav class="navbar navbar-dark navbar-expand-sm bg-dark fixed-top ">
+      <div class="container">
+        <div class="navbar-header">
+          {% load static %}
+          <a class="navbar-brand "  href="{% url 'chart' %}"> <img src="{% static 'img/dataviz.png' %}" height="50" width="200"></a>
+        </div>
+
+        <ul class="nav navbar-nav navbar-right ">
+            <li class="nav-item ">
+              <a class="nav-link " href="{% url 'chart' %}"
+                ><span class="fa fa-home fa-lg"> Home</span></a
+              >
+            </li>
+            <!--
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'news' %}"
+                ><span class="fa fa-list fa-lg"> News</span></a
+              >
+            </li>
+            -->
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'qa' %}"
+                ><span class="fa fa-question-circle fa-lg"> Q&A</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contactus' %}"
+                ><span class="fa fa-address-card fa-lg"> Contact</span></a
+              >
+            </li>
+          </ul>
+        </div>
+
+    </nav>
+    <!--
+    <header class="jumbotron ">
+      <div class="container">
+        <div class="row row-header">
+          <div class="col-12 col-sm-6">
+            <img src="{% static 'img/adataviz.png' %}" height="50" width="200">
+            <br> <br>
+            <p class="lead">
+              A tunisia platform that gives you all information and statistics needed about covid-19
+            </p>
+          </div>
+          <div class="col-12 col-sm align-self-center">
+
+          </div>
+        </div>
+      </div>
+    </header>
+    -->
+
+    {% block content %}
+    {% endblock content %}
+
+    {% include 'welcome/base/js.html' %}
+    <script>
+    $(document).ready(function(){
+      {% block jquery %}{% endblock %}
+    })
+    </script>
+  <footer class="footer bg-dark text-white">
+      <div class=" container-fluid">
+        <div class="row">
+          <div class="col-4 col-sm-2 align-self-center">
+            <h5>Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="{% url 'chart' %}">Home</a></li>
+             <!-- <li><a href="{% url 'news' %}">News</a></li> -->
+              <li><a href="{% url 'qa' %}">Q&A</a></li>
+              <li><a href="{% url 'contactus' %}">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-7 col-sm-5">
+            <h5>Our Address</h5>
+            <address class="text-white">
+              2010,Manouba<br />
+              Manouba University Campus,<br />
+              Tunisia<br />
+              <span class="fa fa-phone fa-lg"> Tel : +216 71 600 444</span>
+              <br />
+              <span class="fa fa-fax fa-lg"> Fax: +216 71 600 444</span>
+              <br />
+              <span class="fa fa-envelope fa-lg">
+                Email:
+                <a href="mailto:confusion@food.net">dataviz@ensi-uma.tn</a></span
+              >
+
+            </address>
+          </div>
+          <div class="col-12 col-sm-4 align-self-center">
+            <div class="text-center">
+              <a class="btn btn-social-icon btn-google href="http://google.com/+"
+                ><span class="fa fa-google-plus fa-lg"></span
+              ></a>
+              <a class="btn btn-social-icon btn-facebook href="http://www.linkedin.com/in/"
+                ><i class="fa fa-facebook fa-lg"></i
+              ></a>
+              <a class="btn btn-social-icon btn-linkedin href="http://www.linkedin.com/in/"
+                ><i class="fa fa-linkedin fa-lg"></i
+              ></a>
+              <a class="btn btn-social-icon btn-twitter href="http://twitter.com/"
+                ><span class="fa fa-twitter fa-lg"></span
+              ></a>
+              <a class="btn btn-social-icon btn-google href="http://youtube.com/"
+                ><span class="fa fa-youtube fa-lg"></span
+              ></a>
+              <a class="btn btn-social-icon mail-icon" href="mailto:"><span class="fa fa-envelope fa-lg"></span></a>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-auto">
+            <p>© Copyright 2020 DATAVIZ</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
