@@ -1,18 +1,8 @@
-import numpy as np
 from operator import itemgetter
 from django.contrib.auth import get_user_model
-import io
-import matplotlib.pyplot as plt
-import pandas as pd
-import base64,urllib
-import math
-from covid import Covid
-from django.views.generic import View
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework import authentication, permissions
-from django.contrib.auth.models import User
 user = get_user_model()
+from covid import Covid
+import pandas as pd
 df = pd.read_csv('https://covid.ourworldindata.org/data/owid-covid-data.csv')
 dic=df.to_dict('split')
 column=dic['columns']
@@ -28,20 +18,6 @@ for day in data1 :
         if info == "World" and day.index(info) == 2:
             world_cases_day_by_day.append(day[5]), world_dates_day_by_day.append(
                 day[3]), world_deaths_day_by_day.append((day[8]))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #countries_lists
 europe_countries=["Russia","Spain","UK","Italy","Germany","France","Sweden","Belarus","Ukraine", "Belgium","Netherlands","Portugal","Romania","Poland","Switzerland","Ireland","Serbia","Moldova","Austria","Czechia","Denmark","Bosnia and Herzegovina","Bulgaria","North Macedonia","Norway","Finland","Luxembourg","Albania","Croatia","Hungary","Greece","Montenegro","Slovakia","Slovenia","Estonia","Lithuania","Iceland","Latvia","Andorra","Malta","San Marino","Channel Islands","Isle of Man","Faeroe Islands","Gibraltar","Monaco","Liechtenstein","Vatican City"]
 north_america_countries=["USA","Mexico","Canada","Dominican Republic","Panama","Guatemala","Honduras","Costa Rica","El Salvador","Haiti","Nicaragua","Cuba","Jamaica","Bahamas","Martinique","Guadeloupe","Cayman Islands","Bermuda","Trinidad and Tobago","Aruba","Sint Maarten","Barbados","Turks and Caicos","Antigua and Barbuda","St. Vincent Grenadines","Saint Martin","Belize","Curaçao","Saint Lucia","Grenada","Dominica","Saint Kitts and Nevis","Greenland","Montserrat","Caribbean Netherlands","British Virgin Islands","St. Barth","Saint Pierre Miquelon","Anguilla"]
@@ -88,7 +64,7 @@ def transform_data_to_list():
         L.append(data.get_status_by_country_name(c))
     return L
 
-#tranforming data to dict
+#tranforming data to list
 covid1=transform_data_to_list()
 #data_of_continetns
 continents=covid1[:5]
@@ -202,22 +178,7 @@ for cnt in south_america :
 #world
 covid=Covid(source="worldometers")
 
-
-#get world and other continents data
-#worldimport numpy as np
-from operator import itemgetter
 from django.contrib.auth import get_user_model
-import io
-import matplotlib.pyplot as plt
-import pandas as pd
-import base64,urllib
-import math
-from covid import Covid
-from django.views.generic import View
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework import authentication, permissions
-from django.contrib.auth.models import User
 user = get_user_model()
 world =covid.get_status_by_country_name("World")
 world.pop("total_tests_per_million",None)

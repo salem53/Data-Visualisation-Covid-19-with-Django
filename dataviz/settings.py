@@ -38,9 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'welcome',
-    'django_plotly_dash.apps.DjangoPlotlyDashConfig',
-    'channels',
-    'channels_redis',
+
+
 
 
 ]
@@ -124,16 +123,9 @@ USE_L10N = True
 USE_TZ = True
 
 CRISPY_TEMPLATE_PACK ='bootstrap4'
-CHANNEL_LAYERS={
-    'default': {
-        'BACKEND' : 'channels_redis.core.RedisChannelLayer',
-        'CONFIG' :  {
-            'hosts' : [('127.0.0.1',6379),],
-        }
-    }
-}
+
 ASGI_APPLICATION ='dataviz.routing.application'
-X_FRAME_OPTIONS = 'SAMEORIGIN'
+
 
 
 
@@ -144,8 +136,7 @@ STATIC_URL = '/static/'
 STATICFILES_FINDERS =[
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'django_plotly_dash.finders.DashAssetFinder',
-    'django_plotly_dash.finders.DashComponentFinder',
+
 
 
 ]
@@ -166,6 +157,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # new
 DEFAULT_FROM_EMAIL = 'salemdhouimir@gmail.com'
 EMAIL_HOST = 'smtp.sendgrid.net' # new
 EMAIL_HOST_USER = 'apikey' # new
-EMAIL_HOST_PASSWORD = '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' # new
+EMAIL_HOST_PASSWORD = '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' # new
 EMAIL_PORT = 587 # new
 EMAIL_USE_TLS = True # new

@@ -1,0 +1,3 @@
+[console_scripts]
+covid = covid.cli:app
+

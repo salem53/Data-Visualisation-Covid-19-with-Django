@@ -1,47 +1,26 @@
-from django.shortcuts import render, redirect, get_object_or_404
-from django.http import HttpResponse, Http404, JsonResponse
-from datetime import datetime
-import numpy as np
-from operator import itemgetter
+from django.shortcuts import render
+from django.http import JsonResponse
 from django.contrib.auth import get_user_model
 from django.core.mail import send_mail
-import io
-import matplotlib.pyplot as plt
-import pandas as pd
-import base64,urllib
-import math
-from covid import Covid
-import json
-from django.views.generic import View
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework import authentication, permissions
-from django.contrib.auth.models import User
+from django.views import View
+
+
+
 user = get_user_model()
 from .data import *
 from django.views.decorators.csrf import csrf_exempt
 
 
 
-
+from rest_framework.response import Response
+from rest_framework.views import APIView
 class ChartData(APIView):
-    """
-    View to list all users in the system.
-
-    * Requires token authentication.
-    * Only admin users are able to access this view.
-    """
     authentication_classes = []
     permission_classes = []
-
-
-
     def get(self, request, format=None):
 
 
         data = {
-            "sales": 100,
-            "customers": 10,
             "total_cases":total_cases(),
             "total_deaths": total_deaths(),
             "continents_names" : continents_names ,
@@ -51,29 +30,10 @@ class ChartData(APIView):
             "world_cases_day_by_day" : world_cases_day_by_day,
             "world_deaths_day_by_day" : world_deaths_day_by_day,
             "all_countries" : all_countries
-
-
-
         }
 
         return Response(data)
 
-def data(request):
-
-    dix=data[:10]
-    plt.plot(range(10))
-    fig = plt.gcf()
-    # convert graph into dtring buffer and then we convert 64 bit code into image
-    buf = io.BytesIO()
-    fig.savefig(buf, format='png')
-    buf.seek(0)
-    string = base64.b64encode(buf.read())
-    uri = urllib.parse.quote(string)
-
-    return render(request,'welcome/data.html',{'column':column,'data':data,'index':index,'range':dix,'data':uri})
-externe=[]
-def welcome(request):
-    return render(request,'welcome/index.html')
 def country(request,country):
 
     country_data_day_by_day=[]
@@ -153,7 +113,7 @@ def contactus(request):
        # contenu += "No , please don\'t disturb me .\n"
         #contenu+="Feedback : "
 
-        send_mail(subject, contenu, 'salem.dhouimir@ensi-uma.tn',[emailid])
+        send_mail(subject, contenu, 'salemdhouimir@gmail.com',[emailid])
 
         return render(request, 'welcome/contactus.html')
     else:
@@ -169,27 +129,3 @@ def qa(request):
 
 
 
-#read csv data
-
-
-"""
-def total_cases():
-    return format((int(countries_cases()['World'])),",")
-def total_deaths():
-    return format((int(countries_deaths()['World'])),",")
-
-
-
-def countries_cases():
-    dictcases={}
-    for i in range(len(data1)) :
-        if not math.isnan(float(data1[i][4])):
-            dictcases[data1[i][2]]=int(data1[i][4])
-    return dictcases
-def countries_deaths():
-    dictcases = {}
-    for i in range(len(data1)):
-        if not math.isnan(float(data1[i][6])):
-            dictcases[data1[i][2]] = int(data1[i][6])
-    return dictcases
-"""
