@@ -113,7 +113,7 @@ def contactus(request):
        # contenu += "No , please don\'t disturb me .\n"
         #contenu+="Feedback : "
 
-        send_mail(subject, contenu, 'salemdhouimir@gmail.com',[emailid])
+        send_mail(subject, contenu, 'salem.dhouimir@ieee.org',[emailid])
 
         return render(request, 'welcome/contactus.html')
     else:

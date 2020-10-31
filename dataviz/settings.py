@@ -154,9 +154,9 @@ STATICFILES_DIRS = (
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # new
-DEFAULT_FROM_EMAIL = 'salemdhouimir@gmail.com'
+DEFAULT_FROM_EMAIL = 'salem.dhouimir@ieee.org'
 EMAIL_HOST = 'smtp.sendgrid.net' # new
 EMAIL_HOST_USER = 'apikey' # new
-EMAIL_HOST_PASSWORD = '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' # new
+#EMAIL_HOST_PASSWORD = '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' # new
 EMAIL_PORT = 587 # new
 EMAIL_USE_TLS = True # new
